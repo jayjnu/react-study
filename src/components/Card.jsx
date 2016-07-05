@@ -3,6 +3,8 @@
  */
 import React, { Component } from 'react';
 import CheckList from './CheckList.jsx';
+import marked from 'marked';
+
 class Card extends Component {
 	constructor(){
 		super(...arguments);
@@ -18,14 +20,14 @@ class Card extends Component {
 		if(this.state.showDetails){
 			cardDetails = (
 				<div className="card__details">
-					{this.props.description}
+					<span dangerouslySetInnerHTML={{__html:marked(this.props.description)}}/>
 					<CheckList cardId={this.props.id} tasks={this.props.tasks} />
 				</div>
 			);
 		}
 		return (
 			<div className="card">
-				<div className="card_title" onClick={this.toggleDetails.bind(this)}>{this.props.title}</div>
+				<div className={this.state.showDetails? "card_title card_title--is-open" : "card_title"} onClick={this.toggleDetails.bind(this)}>{this.props.title}</div>
 				{cardDetails}
 			</div>
 		);
