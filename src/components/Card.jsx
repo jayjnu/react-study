@@ -9,7 +9,7 @@ class Card extends Component {
 	constructor(){
 		super(...arguments);
 		this.state = {
-			showDetails: false
+			showDetails: true
 		};
 	}
 	toggleDetails(){

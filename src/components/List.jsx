@@ -15,7 +15,7 @@ class List extends Component {
 				<h1>{this.props.title}</h1>
 				{cards}
 			</div>
-		)
+		);
 	}
 }
 
