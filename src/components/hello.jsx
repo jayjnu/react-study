@@ -1,10 +1,10 @@
+// todo: react로 코멘트 박스 만들기
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Hello extends React.Component{
 	render(){
-		return <h1>Hello World</h1>;
+		return (<h1>Hello World! written and rendered by ReactJS</h1>);
 	}
 }
 
-ReactDOM.render(<Hello/>, document.getElementById('root'));
+export default Hello;
