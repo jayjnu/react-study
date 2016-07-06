@@ -1,7 +1,7 @@
 /**
  * Created by zach on 2016. 7. 5..
  */
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import List from './List.jsx';
 
 class KanbanBoard extends Component {
@@ -21,5 +21,9 @@ class KanbanBoard extends Component {
 		)
 	}
 }
+
+KanbanBoard.propTypes = {
+	cards: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default KanbanBoard;
