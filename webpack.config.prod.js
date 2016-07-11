@@ -8,7 +8,17 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	plugins: [
-		new webpack.optimize.OccurenceOrderPlugin()
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compressor: {
+				warnings: false
+		 	}
+		})
 	],
 
 	devServer:{
@@ -30,4 +40,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};

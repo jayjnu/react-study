@@ -13,7 +13,9 @@ class List extends Component {
 							  description={card.description}
 							  tasks={card.tasks}
 							  key={card.id}
-						/>);
+							  taskCallbacks={this.props.taskCallbacks}
+					/>
+				);
 			});
 
 		return(
@@ -28,7 +30,8 @@ class List extends Component {
 
 List.propTypes = {
 	title: PropTypes.string.isRequired,
-	cards: PropTypes.arrayOf(PropTypes.object)
+	cards: PropTypes.arrayOf(PropTypes.object),
+	taskCallbacks: PropTypes.object
 };
 
 

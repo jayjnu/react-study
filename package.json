@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "build": "webpack",
+    "produce": "webpack ./webpack.config.prod.js",
     "start": "webpack-dev-server --hot"
   },
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "marked": "^0.3.5",
     "react": "^15.1.0",
+    "react-addons-update": "^15.2.1",
     "react-dom": "^15.1.0"
   },
   "devDependencies": {
